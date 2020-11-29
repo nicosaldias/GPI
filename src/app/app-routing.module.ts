@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CorsairComponent } from './corsair/corsair.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './login/login.component';
-import { NobleComponent } from './noble/noble.component';
-import { SharkoonComponent } from './sharkoon/sharkoon.component';
+import { CorsairComponent } from './paginas/corsair/corsair.component';
+import { InicioComponent } from './paginas/inicio/inicio.component';
+import { LoginComponent } from './paginas/login/login.component';
+import { NobleComponent } from './paginas/noble/noble.component';
+import { SharkoonComponent } from './paginas/sharkoon/sharkoon.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
