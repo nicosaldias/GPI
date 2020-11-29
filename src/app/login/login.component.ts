@@ -14,6 +14,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   ingresar(){
-  this.router.navigate(['inicio'])
+    this.router.navigate(['inicio'])
   }
 }
