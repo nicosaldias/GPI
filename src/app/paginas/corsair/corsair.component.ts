@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./corsair.component.css']
 })
 export class CorsairComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
+  
 
 }

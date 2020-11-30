@@ -11,5 +11,7 @@ export class SharkoonComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onClick(){
+    
+  }
 }

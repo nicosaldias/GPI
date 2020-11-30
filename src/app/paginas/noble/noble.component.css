@@ -1,0 +1,102 @@
+.topnav {
+    overflow: hidden;
+    background-color: #ccccccd7;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  .topnav .login{
+    float: right;
+  }
+  
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+    background-image: url("https://i.ibb.co/JBqr08s/image-from-rawpixel-id-1201862-jpeg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+   
+  .container {
+    max-width: 1200px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+
+  /* Columns */
+.left-column {
+  width: 65%;
+  position: relative;
+  background-image: url("https://i.ibb.co/Qk37Yb1/noble.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 30px;
+}
+
+/* Product Description */
+.product-description {
+  border-bottom: 2px solid #6d6d6d;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #414141;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #cf092c;
+  letter-spacing: -2px;
+  line-height: 60px;
+}
+.product-description p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #d1d1d1;
+  line-height: 20px;
+}
+
+.btn{
+  text-decoration: none;
+  padding: 10px;
+  font-family: arial;
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  background-color:#b30f2d;
+  cursor: pointer;
+  
+}
