@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './paginas/login/login.component';
@@ -11,7 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NobleComponent } from './paginas/noble/noble.component';
 import { CorsairComponent } from './paginas/corsair/corsair.component';
 import { SharkoonComponent } from './paginas/sharkoon/sharkoon.component';
-import { CompraComponent } from './paginas/compra/compra.component';
+import { FormsModule } from '@angular/forms';
+import { ClienteComponent } from './paginas/cliente/cliente.component';
+import { Router, RouterEvent, RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,15 @@ import { CompraComponent } from './paginas/compra/compra.component';
     NobleComponent,
     CorsairComponent,
     SharkoonComponent,
-    CompraComponent,
+    ClienteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatGridListModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
