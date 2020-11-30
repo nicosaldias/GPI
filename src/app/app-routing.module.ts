@@ -5,6 +5,7 @@ import { InicioComponent } from './paginas/inicio/inicio.component';
 import { LoginComponent } from './paginas/login/login.component';
 import { NobleComponent } from './paginas/noble/noble.component';
 import { SharkoonComponent } from './paginas/sharkoon/sharkoon.component';
+import {ClienteComponent} from './paginas/cliente/cliente.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -12,11 +13,14 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'noble', component: NobleComponent},
   {path: 'corsair', component: CorsairComponent},
-  {path: 'sharkoon', component: SharkoonComponent}
+  {path: 'sharkoon', component: SharkoonComponent},
+  {path: 'cliente', component: ClienteComponent },
+  { path:'**', pathMatch:'full', redirectTo:'inicio'}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

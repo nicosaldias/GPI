@@ -8,26 +8,26 @@
 
 <div class="topnav">
   <a style="font-size: 22px; color: 2c2b2b; top:5px;" href="#"><img width="100%" alt="Silla" src="https://i.ibb.co/Vt39XRZ/Sin-t-tulo.png"/></a>
-  <div class="login">
+    <div class="login">
       <a style="font-size: 22px; color: 2c2b2b; top:5px; right: 10px;" href="/login/" ><img width="40" alt="Cuenta" src="https://i.ibb.co/drNvwyk/account.png"/></a>
-  </div>
+    </div>
 </div>
 
 <body>  
 
     <div class="signin-form">
-        <form >
+        <form #f = "ngForm">
             <h2>Bienvenido</h2>
             <br>
             <br>
             <div class="form-group">
-                <input type="text" class="form-control input-lg" name="username" placeholder="Usuario" required="required">
+                <input type="text"  name="mail" [(ngModel)]="cliente_registrado.mail" class="form-control input-lg" placeholder="Email" required="required">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control input-lg" name="password" placeholder="Contraseña" required="required">
+                <input type="password" name="pass" [(ngModel)]="cliente_registrado.pass" class="form-control input-lg"  placeholder="Contraseña" required="required">
             </div>  
             <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" (click)="ingresar()">Ingresar</button>
+                <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" (click)="buscarUsuarioDB(f)">Ingresar</button>
             </div>
         </form>
     </div>
