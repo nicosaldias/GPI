@@ -4,6 +4,7 @@ import { DuenoModel } from 'src/app/models/dueno.models';
 import { LoginService } from 'src/app/servicios/login.service';
 import { NgForm } from '@angular/forms';
 import {Router} from '@angular/router';
+import Swal from 'sweetalert2'
 
 
 
@@ -31,8 +32,16 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/cliente']);
     console.log(resp.usuario[0].mail)
       },
-    )
-  }
+      (error)=>{
+        Swal.fire({
+          icon: 'error',
+          title: 'Acceso Denegado',
+          text: 'Usuario o contraseña incorrectos'
+              
+        });
+
+      })
+}
 
   ingresar(){
     this.router.navigate(['inicio'])

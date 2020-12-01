@@ -26,6 +26,14 @@
     float: right;
   }
   
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;    
+    background-image: url("https://i.ibb.co/JBqr08s/image-from-rawpixel-id-1201862-jpeg.jpg");
+    background-size: cover;
+  }
   .rect{
     display: flex;
     align-items: center;
@@ -129,11 +137,12 @@
     padding: 10px;
     font-family: arial;
     text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
     font-size: 18px;
     color: rgb(255, 255, 255);
     background-color:#b30f2d;
+    cursor: pointer;
     
   }
   

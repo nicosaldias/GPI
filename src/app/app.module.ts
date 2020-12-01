@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { ClienteComponent } from './paginas/cliente/cliente.component';
 import {CompraComponent} from './paginas/compra/compra.component';
 import { Router, RouterEvent, RouterLink } from '@angular/router';
+import { ModalModule } from '../app/paginas/_modal';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { Router, RouterEvent, RouterLink } from '@angular/router';
     MatGridListModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    ModalModule,
     FormsModule
   ],
   providers: [],
