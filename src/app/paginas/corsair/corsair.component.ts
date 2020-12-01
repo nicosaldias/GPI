@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-corsair',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./corsair.component.css']
 })
 export class CorsairComponent implements OnInit {
-  
-  constructor() { }
+  id_producto:any;
+  constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
+    this.id_producto=2;
+  }
+
+  onClick(){
+    this.router.navigate(['/compra/']);
+    console.log(this.id_producto);
   }
   
 

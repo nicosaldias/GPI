@@ -12,6 +12,7 @@ import { CorsairComponent } from './paginas/corsair/corsair.component';
 import { SharkoonComponent } from './paginas/sharkoon/sharkoon.component';
 import { FormsModule } from '@angular/forms';
 import { ClienteComponent } from './paginas/cliente/cliente.component';
+import {CompraComponent} from './paginas/compra/compra.component';
 import { Router, RouterEvent, RouterLink } from '@angular/router';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { Router, RouterEvent, RouterLink } from '@angular/router';
     CorsairComponent,
     SharkoonComponent,
     ClienteComponent,
+    CompraComponent,
   ],
   imports: [
     BrowserModule,

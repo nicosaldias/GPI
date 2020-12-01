@@ -6,6 +6,7 @@ import { LoginComponent } from './paginas/login/login.component';
 import { NobleComponent } from './paginas/noble/noble.component';
 import { SharkoonComponent } from './paginas/sharkoon/sharkoon.component';
 import {ClienteComponent} from './paginas/cliente/cliente.component';
+import {CompraComponent} from './paginas/compra/compra.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'corsair', component: CorsairComponent},
   {path: 'sharkoon', component: SharkoonComponent},
   {path: 'cliente', component: ClienteComponent },
+  {path: 'compra', component: CompraComponent},
   { path:'**', pathMatch:'full', redirectTo:'inicio'}
 ];
 

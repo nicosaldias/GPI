@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sharkoon',
@@ -6,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sharkoon.component.css']
 })
 export class SharkoonComponent implements OnInit {
-
-  constructor() { }
+  id_producto:any;
+  constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
+    this.id_producto=3;
   }
+  
   onClick(){
-    
+    this.router.navigate(['/compra/']);
+    console.log(this.id_producto);
   }
 }
