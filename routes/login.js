@@ -2,14 +2,16 @@ const express = require('express');
 const app = express ();
 const client = require ('../bdd');
 const jwt = require('jsonwebtoken');
-const usuario = require('./login');
+const login = require('./login');
 
 
 //Funciona pero hay que arreglar el tema de las PK en la base de datos
 
-app.post('/verificar-usuario',(req,res)=>{
-    const select_query=`SELECT mail FROM cliente WHERE cliente.mail='${req.body.mail}' AND cliente.pass='${req.body.pass}'`;
-    client.query(select_query,[mail,pass],(err,result)=>{
+app.post('/loginCliente',(req,res)=>{
+    var mail = req.body.mail;
+    var pass = req.body.pass;
+    const select_query=`SELECT mail FROM gestion.cliente as cliente WHERE cliente.mail='${mail}' AND cliente.pass='${pass}'`;
+    client.query(select_query,(err,result)=>{
         if(err){
             message: 'Usuario o contraseña incorrectos'
             console.log(err);
