@@ -20,13 +20,22 @@
             <h2 style="font-size: 30px; color: #414141; letter-spacing: 2px; text-transform: uppercase;">Bienvenido</h2>
             <br>
             <div class="form-group">
-                <input type="text"  name="mail" [(ngModel)]="cliente_registrado.mail" class="form-control input-lg" placeholder="Email" required="required">
+                <input type="text"  name="nombre" [(ngModel)]="nuevo_cliente.nombre" class="form-control input-lg" placeholder="Nombre" required="required">
             </div>
             <div class="form-group">
-                <input type="password" name="pass" [(ngModel)]="cliente_registrado.pass" class="form-control input-lg"  placeholder="Contraseña" required="required">
+                <input type="text"  name="apellido" [(ngModel)]="nuevo_cliente.apellido" class="form-control input-lg" placeholder="Apellido" required="required">
+            </div>
+            <div class="form-group">
+                <input type="text"  name="rut" [(ngModel)]="nuevo_cliente.rut" class="form-control input-lg" placeholder="Rut" required="required">
+            </div>
+            <div class="form-group">
+                <input type="text"  name="mail" [(ngModel)]="nuevo_cliente.mail" class="form-control input-lg" placeholder="Email" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" name="pass" [(ngModel)]="nuevo_cliente.contrasena" class="form-control input-lg"  placeholder="Contraseña" required="required">
             </div>  
             <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" (click)="buscarUsuarioDB(f)">Ingresar</button>
+                <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" (click)="buscarUsuarioDB(f)">Registrarse</button>
             </div>
         </form>
     </div>
