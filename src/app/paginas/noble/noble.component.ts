@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-noble',
@@ -7,12 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NobleComponent implements OnInit {
 
-  constructor() { }
+  miCorreo:any;
+  idNombre:any;
 
-  ngOnInit(): void {
-  }
-  onClick(){
-    
-  }
+  constructor(private loginService:LoginService) {
+    this.miCorreo=localStorage.getItem('mail');
+   }
 
+   ngOnInit(): void {
+
+    this.loginService.buscarID(this.miCorreo).subscribe((resp:any)=>{
+      this.idNombre=resp.usuario[0].nombre;
+      console.log(this.idNombre);
+    })
+  }
+  
 }

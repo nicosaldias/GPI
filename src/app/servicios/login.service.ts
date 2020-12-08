@@ -18,10 +18,10 @@ export class LoginService {
     return this.http.get(`http://localhost:3000/profile/${id}`);
   }
 
-  buscarDuenoDB(dueno:DuenoModel) {
-    return this.http.post('http://localhost:3000/loginDueno',dueno);
+  //buscarDuenoDB(dueno:DuenoModel) {
+    //return this.http.post('http://localhost:3000/loginDueno',dueno);
 
-  } 
+  //} 
 
 
 }

@@ -10,13 +10,12 @@ const login = require('./login');
 app.post('/loginCliente',(req,res)=>{
     var mail = req.body.mail;
     var pass = req.body.pass;
-    const select_query=`SELECT mail FROM gestion.cliente as cliente WHERE cliente.mail='${mail}' AND cliente.pass='${pass}'`;
+    const select_query=`SELECT mail,nombre_cliente,apellido_cliente FROM gestion.cliente as cliente WHERE cliente.mail='${mail}' AND cliente.pass='${pass}'`;
     client.query(select_query,(err,result)=>{
         if(err){
             message: 'Usuario o contraseña incorrectos'
             console.log(err);
         }else{
-            console.log(result);
             return res.json({
                 usuario: result.rows
             })
@@ -25,19 +24,26 @@ app.post('/loginCliente',(req,res)=>{
 })
 
 
-app.post('/verificar-dueno',(req,res)=>{
-    const select_query=`SELECT mail FROM dueno_tienda WHERE dueno_tienda.mail='${req.body.mail}' AND dueno_tienda.pass='${req.body.pass}'`;
-    client.query(select_query,[mail,pass],(err,result2)=>{
-        if(err){
-            message: 'Usuario o contraseña incorrectos'
-            console.log(err);
-        }else{
-            console.log(result2);
-            return res.json({
-                dueno: result2.rows
-            })
+app.get('/profile/:id',(req,res)=>{
+
+    let id = req.params.id;
+    let post_query=`SELECT * FROM gestion.cliente as cliente WHERE cliente.mail ='${id}' `;
+    console.log(id);
+    connection.query(post_query,(err,usuarioDB)=>{
+        
+        if (err) {
+            return res.status(400).json({
+                ok: false,
+                err
+            });
         }
-    })
-})
+        res.json({
+            ok: true,
+            usuario: usuarioDB.rows
+        });
+    });
+});
+
+
 
 module.exports = app;
