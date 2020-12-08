@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
     this.tokens=resp.usuario[0].mail;
     localStorage.setItem('mail', resp.usuario[0].mail);
-    this.router.navigate(['/cliente']);
+    this.router.navigate(['/compra']);
     console.log(resp.usuario[0].mail)
       },
       (error)=>{
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
 }
 
   ingresar(){
-    this.router.navigate(['inicio'])
+    this.router.navigate(['/compra'])
   }
 
 

@@ -29,11 +29,6 @@ app.get('/profile/:id',(req,res)=>{
     });
 
 
-
-
-
-
-
 });
 
 

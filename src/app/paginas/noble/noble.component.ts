@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NobleComponent implements OnInit {
   id_producto:any;
+  stock:any;
   constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
@@ -15,7 +16,7 @@ export class NobleComponent implements OnInit {
   }
 
   onClick(){
-    this.router.navigate(['/compra/']);
+    this.router.navigate(['/login/']);
     console.log(this.id_producto);
   }
 

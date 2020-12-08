@@ -40,10 +40,8 @@
   .signin-form span {
     font-size: 30px;
     color: #414141;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    text-decoration: none;
-    float: left;
   }
 .form-control {
 	font-size: 16px;
@@ -51,29 +49,29 @@
 	box-shadow: none;
 }
 .form-control:focus {
-	border-color: #cf092c;
+	border-color: #5cb85c;
 }
 .form-control, .btn {
 	outline: none !important;
 }
 .signin-form {
-	width: 30%;
-  margin: 0 auto;
-  padding: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+    margin-top: 8px;
+    width: 40%;
+  	padding: 6px;
+  	position: absolute;
+  	left: 50%;
+  	top: 58%;
+  	transform: translate(-50%, -50%);
 }
 .signin-form form {
 	border-radius: 5px;
 	margin-bottom: 20px;
 	background: #fff;
 	box-shadow: 0px 0px 5px #4e4e4e;
-	padding: 10%;
+    padding: 10%;
 }
 .signin-form a {
-	color: #cf092c;
+	color: #c21111;
 }    
 .signin-form h2 {
 	text-align: center;
@@ -81,7 +79,7 @@
 	margin: 10px 0 15px;
 }
 .signin-form .hint-text {
-	color: #cf092c;
+	color: #999;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -90,8 +88,8 @@
 }
 .signin-form .btn {        
 	font-size: 18px;
-	line-height: 26px;        
-	font-weight: bold;
+	line-height: 26px;     
+    background-color: #cf092c;
 	text-align: center;
 }
 .signin-form .small {
@@ -99,12 +97,11 @@
 }
 .signin-btn {
 	text-align: center;
-	background-color: #cf092c;
-	border-color: #cf092c;
+	border-color: #c21111;
 	transition: all 0.4s;
 }
 .signin-btn:hover {
-	background: #cf092c;
+	background: #c21111;
 	opacity: 0.8;
 }
 .or-seperator {
@@ -147,10 +144,10 @@
 	opacity: 0.8;
 }
 .social-btn .btn-primary {
-	background: #cf092c;
+	background: #c21111;
 }
 .social-btn .btn-info {
-	background: #cf092c;
+	background: #c21111;
 }
 .social-btn .btn-danger {
 	background: #df4930;
@@ -158,3 +155,14 @@
 .social-btn .btn i {
 	font-size: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,8 @@ import { NobleComponent } from './paginas/noble/noble.component';
 import { SharkoonComponent } from './paginas/sharkoon/sharkoon.component';
 import {ClienteComponent} from './paginas/cliente/cliente.component';
 import {CompraComponent} from './paginas/compra/compra.component';
+import {FinComponent} from './paginas/fin/fin.component';
+import { RegistroComponent } from './paginas/registro/registro.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'sharkoon', component: SharkoonComponent},
   {path: 'cliente', component: ClienteComponent },
   {path: 'compra', component: CompraComponent},
+  {path: 'felicitaciones', component: FinComponent},
+  {path: 'registro', component: RegistroComponent},
   { path:'**', pathMatch:'full', redirectTo:'inicio'}
 ];
 

@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './paginas/login/login.component';
 import { InicioComponent } from './paginas/inicio/inicio.component';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NobleComponent } from './paginas/noble/noble.component';
@@ -12,10 +12,12 @@ import { CorsairComponent } from './paginas/corsair/corsair.component';
 import { SharkoonComponent } from './paginas/sharkoon/sharkoon.component';
 import { FormsModule } from '@angular/forms';
 import { ClienteComponent } from './paginas/cliente/cliente.component';
-import {CompraComponent} from './paginas/compra/compra.component';
+import { CompraComponent} from './paginas/compra/compra.component';
 import { Router, RouterEvent, RouterLink } from '@angular/router';
 import { ModalModule } from '../app/paginas/_modal';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FinComponent } from './paginas/fin/fin.component';
+import { RegistroComponent } from './paginas/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharkoonComponent,
     ClienteComponent,
     CompraComponent,
+    FinComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,

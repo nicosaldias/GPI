@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CorsairComponent implements OnInit {
   id_producto:any;
+  stock:any;
   constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
@@ -15,8 +16,7 @@ export class CorsairComponent implements OnInit {
   }
 
   onClick(){
-    this.router.navigate(['/compra/']);
-    console.log(this.id_producto);
+    this.router.navigate(['/login/']);
   }
   
 
