@@ -16,9 +16,17 @@ import Swal from 'sweetalert2'
 export class RegistroComponent implements OnInit {
   nuevo_cliente: SigninModel= new SigninModel();
 
-  constructor() { }
+  constructor(private signinService: SigninService,private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  guardarUsuarioDB(formulario: NgForm){
+    this.signinService.crearUsuario(this.nuevo_cliente).subscribe(
+      resp=>{
+        console.log(resp)
+        this.router.navigate(['/inicio']);
+      }
+    );
+  }
 }

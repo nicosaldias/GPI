@@ -24,4 +24,8 @@ export class LoginService {
   //} 
 
 
+  stock(id:any){
+    return this.http.get(`http://localhost:3000/stockproducto/${id}`);
+  }
+
 }

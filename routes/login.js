@@ -45,5 +45,26 @@ app.get('/profile/:id',(req,res)=>{
 });
 
 
+app.get('/stockproducto/:id',(req,res)=>{
+
+    let id = req.params.id;
+    let post_query=`SELECT * FROM gestion.producto as productos WHERE productos.id_producto ='${id}' `;
+    
+    client.query(post_query,(err,usuarioDB2)=>{
+        
+        if (err) {
+            return res.status(400).json({
+                ok: false,
+                err
+            });
+        }
+        res.json({
+            ok: true,
+            usuario1: usuarioDB2.rows
+        });
+    });
+});
+
+
 
 module.exports = app;

@@ -8,7 +8,7 @@ const client = require ('../bdd');
 app.post('/crear',(req,res)=>{
 
     let body = req.body;
-    let post_query=`INSERT INTO usuario (mail, pass) VALUES ('${body.mail}', '${body.pass}')`;
+    let post_query=`INSERT INTO  gestion.cliente (rut, mail, pass, nombre_cliente, apellido_cliente) VALUES ('${body.rut}', '${body.mail}','${body.pass}','${body.nombre_cliente}','${body.apellido_cliente}')`;
 
     client.query(post_query,(err,usuarioDB)=>{
 
@@ -19,36 +19,12 @@ app.post('/crear',(req,res)=>{
                 err
             });
         }else{
-            let post_query2=`INSERT INTO cliente_registrado (mail, rut, nombre, apellidop, apellidom, telefono) VALUES ('${body.mail}', '${body.rut}','${body.nombre}','${body.apellidop}','${body.apellidom}','${body.telefono}')`;
-            client.query(post_query2, (err2, usuarioDB2)=>{
-                if (err) {
-                    console.log(err);
-                    return res.status(400).json({
-                        ok: false,
-                        err
-                    });
-                }
-                res.json({
-                    ok: true,
-                    usuario: usuarioDB2
-                });
+            res.json({
+                ok: true,
+                usuario: usuarioDB
             });
         }
-
-        res.json({
-            ok: true,
-            usuario: usuarioDB
-        });
-
-
     });
-
-
-
-
-
-
-
 });
 
 

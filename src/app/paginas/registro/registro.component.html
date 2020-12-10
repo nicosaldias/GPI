@@ -16,14 +16,14 @@
 <body>  
 
     <div class="signin-form">
-        <form #f = "ngForm">
+        <form (ngSubmit) = "guardarUsuarioDB(f)" #f = "ngForm">
             <h2 style="font-size: 30px; color: #414141; letter-spacing: 2px; text-transform: uppercase;">Bienvenido</h2>
-            <br>
+            <h3 style="font-size: 20px; color: #414141; letter-spacing: 2px; ">Ingrese sus datos para registrarse</h3>    
             <div class="form-group">
-                <input type="text"  name="nombre" [(ngModel)]="nuevo_cliente.nombre" class="form-control input-lg" placeholder="Nombre" required="required">
+                <input type="text"  name="nombre" [(ngModel)]="nuevo_cliente.nombre_cliente" class="form-control input-lg" placeholder="Nombre" required="required">
             </div>
             <div class="form-group">
-                <input type="text"  name="apellido" [(ngModel)]="nuevo_cliente.apellido" class="form-control input-lg" placeholder="Apellido" required="required">
+                <input type="text"  name="apellido" [(ngModel)]="nuevo_cliente.apellido_cliente" class="form-control input-lg" placeholder="Apellido" required="required">
             </div>
             <div class="form-group">
                 <input type="text"  name="rut" [(ngModel)]="nuevo_cliente.rut" class="form-control input-lg" placeholder="Rut" required="required">
@@ -32,10 +32,10 @@
                 <input type="text"  name="mail" [(ngModel)]="nuevo_cliente.mail" class="form-control input-lg" placeholder="Email" required="required">
             </div>
             <div class="form-group">
-                <input type="password" name="pass" [(ngModel)]="nuevo_cliente.contrasena" class="form-control input-lg"  placeholder="Contraseña" required="required">
-            </div>  
+                <input type="password" name="text" [(ngModel)]="nuevo_cliente.contrasena" class="form-control input-lg"  placeholder="Contraseña" required="required">
+            </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" (click)="buscarUsuarioDB(f)">Registrarse</button>
+                <button type="submit" class="btn btn-success btn-lg btn-block signin-btn">Registrarse</button>
             </div>
         </form>
     </div>
