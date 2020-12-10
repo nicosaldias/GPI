@@ -15,6 +15,7 @@ app.use(require('./routes/login'));
 app.use(require('./routes/dueno'));
 app.use(require('./routes/crearUsuario'));
 app.use(require('./routes/paginaUsuario'));
+app.use(require('./routes/procesarCompra'));
 
 app.listen(3000,()=>{
     console.log('Conectado al puerto 3000');

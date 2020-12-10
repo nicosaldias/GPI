@@ -18,7 +18,7 @@
     <div class="signin-form">
         <form (ngSubmit) = "guardarUsuarioDB(f)" #f = "ngForm">
             <h2 style="font-size: 30px; color: #414141; letter-spacing: 2px; text-transform: uppercase;">Bienvenido</h2>
-            <h3 style="font-size: 20px; color: #414141; letter-spacing: 2px; ">Ingrese sus datos para registrarse</h3>    
+            <h3 style="font-size: 20px; color: #706f6f; text-align: center; ">Ingrese sus datos para registrarse</h3>    
             <div class="form-group">
                 <input type="text"  name="nombre" [(ngModel)]="nuevo_cliente.nombre_cliente" class="form-control input-lg" placeholder="Nombre" required="required">
             </div>
@@ -39,4 +39,4 @@
             </div>
         </form>
     </div>
-    </body>
+</body>

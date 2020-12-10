@@ -11,13 +11,25 @@
       <span>INFORMACIÓN DE DESPACHO</span>
       <br><br>
       <div class="form">
-        <form class="login-form" [formGroup]="formdata" (ngSubmit) = "onClickSubmit()">
-          <input type="text" placeholder="Comuna" formControlName="comuna"/> <br>
-          <input type="text" placeholder="Calle" formControlName="calle"/> <br>
-          <input type="text" placeholder="Número" formControlName="numero"/> <br>
-          <input type="text" placeholder="Piso/Departamento    (Opcional)" formControlName="depto"/> <br>
-          <input type="text" placeholder="Teléfono" formControlName="telefono"/> <br>
-          <input type="submit" [disabled] ="!formdata.valid" class="forsubmit" value="Ingresar">
+        <form (ngSubmit) = "registrarcompraDB(f)" #f = "ngForm"> 
+          <div class="form-group">
+              <input type="text"  name="comuna" [(ngModel)]="info_pedido.comuna" class="form-control input-lg" placeholder="Comuna" required="required">
+          </div>
+          <div class="form-group">
+              <input type="text"  name="calle" [(ngModel)]="info_pedido.calle" class="form-control input-lg" placeholder="Calle" required="required">
+          </div>
+          <div class="form-group">
+              <input type="text"  name="numero" [(ngModel)]="info_pedido.numero" class="form-control input-lg" placeholder="Número" required="required">
+          </div>
+          <div class="form-group">
+              <input type="text"  name="depto" [(ngModel)]="info_pedido.depto" class="form-control input-lg" placeholder="Depto/Casa">
+          </div>
+          <div class="form-group">
+              <input type="text" name="telefono" [(ngModel)]="info_pedido.telefono" class="form-control input-lg"  placeholder="Teléfono de contacto" required="required">
+          </div>
+          <div class="form-group">
+              <button type="submit" class="btn btn-success btn-lg btn-block signin-btn">Procesar compra</button>
+          </div>
         </form>
       </div>
     </div>
