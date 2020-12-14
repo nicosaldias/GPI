@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   cliente_registrado: LoginModel= new LoginModel();
   //dueno: DuenoModel = new DuenoModel();
-  tokens:Object;
+  //tokens:Object;
 
   constructor(private router: Router, private loginService: LoginService) { }
 
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   buscarUsuarioDB(formulario:NgForm){
     this.loginService.buscarCliente(this.cliente_registrado).subscribe((resp:any)=>{
 
-    this.tokens=resp.usuario[0].mail;
+    //this.tokens=resp.usuario[0].mail;
     localStorage.setItem('mail', resp.usuario[0].mail);
     this.router.navigate(['/compra']);
     console.log(resp.usuario[0].mail)

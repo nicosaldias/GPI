@@ -28,7 +28,8 @@ export class CorsairComponent implements OnInit {
     }
   
 
-  onClick(){
+  onClick(id:any){
+    localStorage.setItem('idsilla', id);
     this.router.navigate(['/login/']);
   }
 

@@ -25,9 +25,8 @@ export class SharkoonComponent implements OnInit {
       });
 }
  
-onClick(){
+onClick(id:any){
+  localStorage.setItem('idsilla', id);
   this.router.navigate(['/login/']);
-  console.log(this.id_producto);
-
 }
 }

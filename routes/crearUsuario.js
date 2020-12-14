@@ -2,9 +2,6 @@ const express = require('express');
 const app = express ();
 const client = require ('../bdd');
 
-
-// No se ha probado en la base de datos de la U
-
 app.post('/crear',(req,res)=>{
 
     let body = req.body;

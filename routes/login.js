@@ -10,7 +10,7 @@ const login = require('./login');
 app.post('/loginCliente',(req,res)=>{
     var mail = req.body.mail;
     var pass = req.body.pass;
-    const select_query=`SELECT mail,nombre_cliente,apellido_cliente FROM gestion.cliente as cliente WHERE cliente.mail='${mail}' AND cliente.pass='${pass}'`;
+    const select_query=`SELECT * FROM gestion.cliente as cliente WHERE cliente.mail='${mail}' AND cliente.pass='${pass}'`;
     client.query(select_query,(err,result)=>{
         if(err){
             message: 'Usuario o contraseña incorrectos'
